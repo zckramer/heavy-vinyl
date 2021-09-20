@@ -1,0 +1,30 @@
+#nav-bar{
+    position:absolute;
+    right: 0;
+    top: 0;
+    background-color: black;
+    color: white;
+    height: 10%;
+    width: 100%;
+    border: 2px double black;
+    border-radius: 6px;
+    border-bottom: 3px solid black;
+}
+
+#nav-bar__search-bar form{
+    display:flex;
+    align-items: center;
+}
+
+button{
+    height: 2rem;
+    color: white;
+    background-color: slategray;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+input{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
