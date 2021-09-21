@@ -2,41 +2,28 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { Album } from './album';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AlbumService {
+  response: any;
+  
+  readonly ROOT_URL = "http://localhost:8080/"
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private http: HttpClient) {
 
   }
 
-  async getAlbums(){
-    const res = await this.httpClient.get("http://localhost:8080/albums/all")
-    console.log(res)
+  getAlbums(): Observable<Album[]> {
+    return this.http.get<Album[]>(this.ROOT_URL + 'albums/all');
   }
-
-  // getAlbums(){
-  //   return [
-  //     "Nevermind",
-  //     "Kind of Blue", 
-  //     "Neon Bible", 
-  //     "Frances the Mute"
-  //   ]
-  // }
 
   getArtists(){
-    return [
-      "Nirvana",
-      "Miles Davis",
-      "Arcade Fire",
-      "The Mars Volta"
-    ]
+
   }
 
   getAlbumArt(){
-    return "https://placekitten.com/500/500"
+
   }
 
 }

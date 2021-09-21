@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavComponentComponent } from './nav-component/nav-component.component';
@@ -13,9 +13,9 @@ import { AlbumService } from './album.service';
     AppComponent,
     NavComponentComponent,
     DataCardComponent,
-    // HttpClientModule
   ],
   imports: [
+    HttpClientModule,
     BrowserModule
   ],
   providers: [

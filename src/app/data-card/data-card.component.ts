@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
 export class DataCardComponent implements OnInit {
 
   constructor() {
-    let service = new AlbumService();
+
   }
 
   ngOnInit(): void {
